@@ -120,7 +120,7 @@ RUN useradd --user-group -d ${SUPERSET_HOME} -m --no-log-init --shell /bin/bash 
 # Some bash scripts needed throughout the layers
 COPY --chmod=755 docker/*.sh /app/docker/
 
-RUN pip install --no-cache-dir --upgrade uv
+RUN pip install --no-cache-dir --retries 10 --timeout 120 --upgrade uv
 
 # Using uv as it's faster/simpler than pip
 RUN uv venv /app/.venv
@@ -241,6 +241,10 @@ RUN --mount=type=cache,target=${SUPERSET_HOME}/.cache/uv \
 # Install the superset package
 RUN --mount=type=cache,target=${SUPERSET_HOME}/.cache/uv \
     uv pip install -e .
+# psycopg2, for postgresql:// analytics connections and metadata DBs. Without it
+# every Postgres connection fails with ModuleNotFoundError: No module named 'psycopg2'.
+RUN --mount=type=cache,target=${SUPERSET_HOME}/.cache/uv \
+    uv pip install .[postgres]
 RUN python -m compileall /app/superset
 
 USER superset
