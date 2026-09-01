@@ -25,6 +25,7 @@ import {
 import CalendarChartPlugin from '@superset-ui/plugin-chart-calendar';
 import ChordChartPlugin from '@superset-ui/plugin-chart-chord';
 import CountryMapChartPlugin from '@superset-ui/plugin-chart-country-map';
+import { KleebotGasTankChartPlugin } from '@superset-ui/plugin-chart-gas-tank';
 import HorizonChartPlugin from '@superset-ui/plugin-chart-horizon';
 import PairedTTestChartPlugin from '@superset-ui/plugin-chart-paired-t-test';
 import ParallelCoordinatesChartPlugin from '@superset-ui/plugin-chart-parallel-coordinates';
@@ -106,6 +107,9 @@ export default class MainPreset extends Preset {
       name: 'Legacy charts',
       presets: [new DeckGLChartPreset()],
       plugins: [
+        new KleebotGasTankChartPlugin().configure({
+          key: 'kleebot-gas-tank',
+        }),
         new BigNumberChartPlugin().configure({ key: VizType.BigNumber }),
         new BigNumberTotalChartPlugin().configure({
           key: VizType.BigNumberTotal,
