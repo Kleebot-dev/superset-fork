@@ -1,0 +1,30 @@
+{
+  "name": "@superset-ui/plugin-chart-gas-tank",
+  "version": "0.1.5",
+  "private": true,
+  "description": "Superset chart plugin for displaying a percentage as a gas tank",
+  "keywords": [
+    "chart",
+    "superset",
+    "tank"
+  ],
+  "homepage": "https://github.com/apache/superset",
+  "bugs": {
+    "url": "https://github.com/apache/superset/issues"
+  },
+  "license": "Apache-2.0",
+  "author": "JAML",
+  "files": [
+    "esm",
+    "lib"
+  ],
+  "sideEffects": false,
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "peerDependencies": {
+    "@apache-superset/core": "*",
+    "@superset-ui/chart-controls": "*",
+    "@superset-ui/core": "*",
+    "react": "^18.3.0"
+  }
+}
