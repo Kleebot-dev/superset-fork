@@ -1,0 +1,30 @@
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements. See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership. The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License. You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied. See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180">
+  <rect width="240" height="180" fill="#fff"/>
+  <rect x="28" y="142" width="184" height="24" fill="#d9f3f6" stroke="#222" stroke-width="5"/>
+  <rect x="14" y="132" width="32" height="44" rx="6" fill="#d9f3f6" stroke="#222" stroke-width="5"/>
+  <rect x="194" y="132" width="32" height="44" rx="6" fill="#d9f3f6" stroke="#222" stroke-width="5"/>
+  <rect x="105" y="120" width="30" height="26" fill="#d9f3f6" stroke="#222" stroke-width="5"/>
+  <circle cx="120" cy="72" r="70" fill="#d9f3f6" stroke="#222" stroke-width="6"/>
+  <circle cx="120" cy="72" r="57" fill="#fff" stroke="#20a7c9" stroke-width="7"/>
+  <rect x="64" y="30" width="112" height="58" rx="8" fill="#d9f3f6" stroke="#222" stroke-width="4"/>
+  <text x="120" y="58" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="700" fill="#222">1,248</text>
+  <text x="120" y="77" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#555">L/min</text>
+</svg>
